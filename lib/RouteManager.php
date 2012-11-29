@@ -1,6 +1,6 @@
 <?php
 /**
- * RouteManager, a singleton that is used for dispatching requests
+ * RouteManager, a singleton that is used for dispatching requests to the appropriate controller
  *
  * @author Ersin Buckley
  * @version 0.1

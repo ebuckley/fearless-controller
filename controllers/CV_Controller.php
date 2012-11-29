@@ -15,12 +15,18 @@ class CV_Controller
     }
     public function respond ()
     {
-        #TODO refactor controllers into a base class
         $template_engine = AppSingleton::sharedInstance()->template_engine;
         # load a view and send it off
         $template = $template_engine->loadTemplate('cv');
 
-        $data = array('title' => "Curriculum Vitae of Ersin Buckley" );
+        $data = array('title' => "Curriculum Vitae of Ersin Buckley",
+                'navitems' => array(
+                    array('url'=>APP_URL_PREFIX, 'name'=>'Home'),
+                    array('url'=>APP_URL_PREFIX.'/cv/', 'name'=>'CV', 'isactive'=>true),
+                    array('url'=>"https://github.com/ebuckley/", 'name'=>'Github'),
+                    array('url'=>"https://twitter.com/ersinbuckley", 'name'=>'@ersinbuckley'),
+                )
+        );
         echo $template->render($data);
     }
 } // END class

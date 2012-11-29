@@ -50,7 +50,7 @@ $app->template_engine = new Mustache_Engine(array(
 
 # route the request
 $router = RouteManager::sharedRouter();
-$router->error_controller = new SimpleMessageController("404, quickly fix this before someone notices!");
+$router->error_controller = new SimpleMessageController("404, quickly  <a href='https://github.com/ebuckley/fearless-controller'>fix this</a> before someone notices! ");
 $router->addRoute('/', 'Index_Controller');
 $router->addRoute('/cv/', 'CV_Controller');
 

@@ -22,7 +22,7 @@ small {
 p {
     margin-bottom: 1.6;
     line-height: 1.6;
-    max-width: 34em; /* 80 characters */
+    max-width: 34em; /* ~80 characters */
 }
 li {
     max-width:34em;
@@ -40,13 +40,69 @@ li {
     margin-top:0em;
     margin-bottom: 1.1em;
 }
+#copyright {
+    line-height: 1.1;
+    font-size: 0.8em;
+    width: 510px;
+    margin: 0 auto 0;
+}
+
+/**
+ * Navigation and hyperlinks
+ **/
+#navigation ul{
+    padding-left: 0px;
+    display: inline;
+}
+#navigation li{
+    list-style: none;
+    display: inline;
+}
+#navigation a{
+    color: rgb(252, 128, 61);
+    font-style: none;
+}
+#navigation a:visited{
+    color: rgb(252, 128, 61);
+    font-style: none;
+}
+#navigation a:active{
+    color: rgb(252, 128, 61);
+    font-style: none;
+}
+#navigation a:hover{
+    background-color: rgb(71,67,63);
+    color: rgb(248, 187, 57);
+}
+#navigation a.activenav {
+    background-color: rgb(71,67,63);
+    color: rgb(248, 187, 57);
+    font-style: none;
+}
+
+a,
+a:active,
+a:hover,
+a:visited {
+    color: rgb(46, 188, 107);
+}
+a.emphasize {
+    font-weight: 250;
+    font-size: 1.2em;
+    line-height: 0.9em; /* note that line height needs to be small in order to allow for the increased font size and still have everything flow nicely */
+}
+/**
+ * Layout styles, TODO move these to another css file so organisation makes more sense
+ **/
 #container {
     width: 510px;
     margin: 0 auto 0;
 }
-#copyright {
-    line-height: 1.1;
-    font-size: 0.8em;
-    width: 400px;
-    margin: 0 auto 0;
+div #date{
+    font-weight: 100;
+    font-style: italic;
+    margin-bottom: -15px;
+}
+#content {
+    margin-top: 20px;
 }
