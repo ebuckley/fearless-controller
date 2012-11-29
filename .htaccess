@@ -1,0 +1,9 @@
+RewriteEngine on
+
+# dont allow access to the php files in lib
+RewriteCond %{REQUEST_URI} ^/lib.*
+RewriteRule . index.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.php [L]
